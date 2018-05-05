@@ -16,8 +16,7 @@
     <link href="{% static 'files/login/styles.css' %}" type="text/css"
           rel="stylesheet"/>
     <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css"
-          type="text/css"
-          rel="stylesheet"/>
+          type="text/css" rel="stylesheet"/>
     <style type="text/css">
 @font-face {
 font-family: 'IcoMoon-Free';
@@ -25,12 +24,6 @@ src: url('https://raw.githubusercontent.com/Keyamoon/IcoMoon-Free/master/Font/Ic
 font-weight: normal;
 font-style: normal;
 }
-
-
-
-
-
-
 
     </style>
     <script src="{% static 'resources/scripts/jquery-1.7.1.min.js' %}"></script>
@@ -44,131 +37,132 @@ font-style: normal;
       $axure.utils.getOtherPath = function() { return 'resources/Other.html'; };
       $axure.utils.getReloadPath = function() { return 'resources/reload.html'; };
 
-
-
-
-
-
-
     </script>
 </head>
 <body>
-<div id="base" class="">
-    <form method="post" action="{% url 'login' %}">
-        {% csrf_token %}
-        <!-- Unnamed (Image) -->
-        <div id="u66" class="ax_default image">
-            <img id="u66_img" class="img " src="{% static 'images/u66.jpg' %}"/>
-        </div>
-
-        <!-- Unnamed (Rectangle) -->
-        <div id="u67" class="ax_default label">
-            <div id="u67_div" class=""></div>
-            <div id="u67_text" class="text ">
-                <p><span>Login</span></p>
-            </div>
-        </div>
-
-        <!-- Unnamed (Rectangle) -->
-        <div id="u68" class="ax_default label">
-            <div id="u68_div" class=""></div>
-            <div id="u68_text" class="text ">
-                {{ form.username.label_tag }}
-            </div>
-        </div>
-
-        <!-- Unnamed (Rectangle) -->
-        <div id="u69" class="ax_default label">
-            <div id="u69_div" class=""></div>
-            <div id="u69_text" class="text ">
-                {{ form.password.label_tag }}
-            </div>
-        </div>
-
-        <!-- Unnamed (Text Field) -->
-        <div id="u70" class="ax_default text_field">
-            {{ form.username }}
-        </div>
-
-        <!-- Unnamed (Text Field) -->
-        <div id="u71" class="ax_default text_field">
-            {{ form.password }}
-        </div>
-
-        <!-- Unnamed (Rectangle) -->
-        <div id="u72" class="ax_default label">
-            <div id="u72_div" class=""></div>
-            <div id="u72_text" class="text ">
-                <p><span>New here? Please</span></p>
-            </div>
-        </div>
-
-        <!-- Unnamed (Rectangle) -->
-        <div id="u73" class="ax_default box_1">
-            <div id="u73_div" class=""></div>
-            <div id="u73_text" class="text ">
-                <p><span style="text-decoration:underline;">sign up</span></p>
-            </div>
-        </div>
-
-        <!-- Unnamed (Rectangle) [reference page] -->
-        <div id="u73_ref" class="reference_page"></div>
-
-        <!-- Logo (Group) -->
-        <div id="u74" class="ax_default" data-label="Logo" data-left="101"
-             data-top="56" data-width="563"
-             data-height="122">
-
+{% block content %}
+    <div id="base" class="">
+        <form method="post" action="{% url 'login' %}">
+            {% csrf_token %}
             <!-- Unnamed (Image) -->
-            <div id="u75" class="ax_default image">
-                <img id="u75_img" class="img "
-                     src="{% static 'images/comfood/u4.png' %}"/>
+            <div id="u79" class="ax_default image">
+                <img id="u79_img" class="img "
+                     src="{% static 'images/login/u79.jpg' %}"/>
             </div>
+            {% if form.errors %}
+                <p>Your username and password didn't match. Please try
+                    again.</p>
+            {% endif %}
 
+            {% if next %}
+                {% if user.is_authenticated %}
+                    <p>Your account doesn't have access to this page. To
+                        proceed,
+                        please login with an account that has access.</p>
+                {% else %}
+                    <p>Please login to see this page.</p>
+                {% endif %}
+            {% endif %}
             <!-- Unnamed (Rectangle) -->
-            <div id="u76" class="ax_default heading_1">
-                <div id="u76_div" class=""></div>
-                <div id="u76_text" class="text ">
-                    <p><span>ComFood</span></p>
+            <div id="u80" class="ax_default label">
+                <div id="u80_div" class=""></div>
+                <div id="u80_text" class="text ">
+                    <p><span>{{ form.username.label_tag }}</span></p>
                 </div>
             </div>
-        </div>
 
-        <!-- Unnamed (Group) -->
-        <div id="u77" class="ax_default" data-left="101" data-top="56"
-             data-width="563" data-height="122">
+            <!-- Unnamed (Rectangle) -->
+            <div id="u81" class="ax_default label">
+                <div id="u81_div" class=""></div>
+                <div id="u81_text" class="text ">
+                    <p><span>{{ form.password.label_tag }}</span></p>
+                </div>
+            </div>
 
-            <!-- Unnamed (Image) -->
-            <div id="u78" class="ax_default image">
-                <img id="u78_img" class="img "
-                     src="{% static 'images/comfood/u4.png' %}"/>
+            <!-- Unnamed (Text Field) -->
+            <div id="u82" class="ax_default text_field">
+                {{ form.username }}
+            </div>
+
+            <!-- Unnamed (Text Field) -->
+            <div id="u83" class="ax_default text_field">
+                {{ form.password }}
             </div>
 
             <!-- Unnamed (Rectangle) -->
-            <div id="u79" class="ax_default heading_1">
-                <div id="u79_div" class=""></div>
-                <div id="u79_text" class="text ">
-                    <p><span>ComFood</span></p>
+            <div id="u84" class="ax_default label">
+                <div id="u84_div" class=""></div>
+                <div id="u84_text" class="text ">
+                    <p><span>New here? Please</span></p>
+                </div>
+            </div>
+
+            <!-- Unnamed (Rectangle) -->
+            <div id="u85" class="ax_default box_1">
+                <img id="u85_img" class="img "
+                     src="{% static 'images/login/u85.png' %}"/>
+                <div id="u85_text" class="text ">
+                    <p><span style="text-decoration:underline;">register</span>
+                    </p>
                 </div>
             </div>
 
             <!-- Unnamed (Rectangle) [reference page] -->
-            <div id="u79_ref" class="reference_page"></div>
-        </div>
+            <div id="u85_ref" class="reference_page"></div>
 
-        <!-- Unnamed (Rectangle) -->
-        <div id="u80" class="ax_default box_1">
-            <div id="u80_div" class="">
-                <input type="submit" value="login"/>
-                <input type="hidden" name="next" value="{{ next }}"/>
+            <!-- Logo (Group) -->
+            <div id="u86" class="ax_default" data-label="Logo" data-left="101"
+                 data-top="56" data-width="563" data-height="122">
+
+                <!-- Unnamed (Image) -->
+                <div id="u87" class="ax_default image">
+                    <img id="u87_img" class="img "
+                         src="{% static 'images/home/u4.png' %}"/>
+                </div>
+
+                <!-- Unnamed (Rectangle) -->
+                <div id="u88" class="ax_default heading_1">
+                    <div id="u88_div" class=""></div>
+                    <div id="u88_text" class="text ">
+                        <p><span>ComFood</span></p>
+                    </div>
+                </div>
             </div>
 
-            <div id="u80_text" class="text ">
+            <!-- Unnamed (Group) -->
+            <div id="u89" class="ax_default" data-left="101" data-top="56"
+                 data-width="563" data-height="122">
 
+                <!-- Unnamed (Image) -->
+                <div id="u90" class="ax_default image">
+                    <img id="u90_img" class="img "
+                         src="{% static 'images/home/u4.png' %}"/>
+                </div>
+
+                <!-- Unnamed (Rectangle) -->
+                <div id="u91" class="ax_default heading_1">
+                    <div id="u91_div" class=""></div>
+                    <div id="u91_text" class="text ">
+                        <p><span></span></p>
+                    </div>
+                </div>
+
+                <!-- Unnamed (Rectangle) [reference page] -->
+                <div id="u91_ref" class="reference_page"></div>
             </div>
-        </div>
-    </form>
-</div>
 
+            <!-- Unnamed (Rectangle) -->
+            <div id="u92" class="ax_default box_1">
+                <div id="u92_div" class=""></div>
+                <div id="u92_text" class="text ">
+                    <input type="submit" value="login"/>
+{#                    <p><span>Log in</span></p>#}
+                    <input type="hidden" name="next" value="{{ next }}"/>
+                </div>
+            </div>
+        </form>
+    </div>
+
+{% endblock %}
 </body>
 </html>
