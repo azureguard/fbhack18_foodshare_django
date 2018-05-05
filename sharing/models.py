@@ -1,5 +1,17 @@
 from django.db import models
-from ..users.models import models
+
+
+class ItemManager(models.Manager):
+    def create_user(self, name, university, address, email, password):
+        user = self.create(name=name, university=university, address=address,
+                           email=email, password=password)
+        return user
+
+    def create_recipe(self):
+        pass
+
+    def create_share(self):
+        pass
 
 
 class Item(models.Model):
@@ -13,11 +25,7 @@ class Item(models.Model):
 class Recipe(models.Model):
     user = models.ForeignKey('users.User', on_delete=models.PROTECT)
     name = models.CharField(max_length=50)
-
-
-class RecipeItem(models.Model):
-    item = models.ForeignKey('Item', on_delete=models.PROTECT)
-    recipe = models.ForeignKey('Recipe', on_delete=models.PROTECT)
+    items = models.ManyToManyField('Item')
 
 
 class AvailableItem(models.Model):
