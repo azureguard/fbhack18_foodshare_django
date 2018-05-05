@@ -1,17 +1,21 @@
 from django.db import models
+from .models import users
 
 
 class ItemManager(models.Manager):
-    def create_user(self, name, university, address, email, password):
-        user = self.create(name=name, university=university, address=address,
-                           email=email, password=password)
-        return user
+    def create_item(self, name, type, amount, unit):
+        item = self.create(name = name, type = type, amount = amount, unit = unit)
+        return item
 
-    def create_recipe(self):
-        pass
+class RecipeManager(models.Manager):
+    def create_recipe(self, name):
+        recipe = self.create(user = users.User.name, name = name, items = Item.name)
+        return recipe
 
-    def create_share(self):
-        pass
+class AvailableItem
+    def create_availableitem(self):
+        availableitem = self.create()
+        return availableitem
 
 
 class Item(models.Model):
