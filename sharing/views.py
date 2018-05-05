@@ -11,7 +11,7 @@ from .models import User, Profile
 def user_details(request, user_id):
     user = get_object_or_404(User, pk=user_id)
     profile = get_object_or_404(Profile, pk=user_id)
-    return render(request, 'sharing/details.html',
+    return render(request, 'sharing/user_details.html',
                   {'user': user, "profile": profile})
 
 
