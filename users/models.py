@@ -2,7 +2,8 @@ from django.db import models
 
 class UserManager(models.Manager):
     def create_user(self, name, university, address, email, password):
-        user = self.create(name = name, university = university, address = address, email = email, password = password)
+        user = self.create(name = name, university = university, address = address,
+                           email = email, password = password)
         return user
 
 class User(models.Model):
@@ -14,5 +15,6 @@ class User(models.Model):
     address = models.CharField(max_length= 100)
     email = models.EmailField(max_length= 255)
     password = models.CharField(max_length = 50)
+    credit = models.IntegerField(default= 100)
 
     objects = UserManager
