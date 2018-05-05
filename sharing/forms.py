@@ -12,3 +12,13 @@ class ProfileForm(forms.ModelForm):
     class Meta:
         model = Profile
         fields = ('university', 'address')
+
+
+class RegistrationForm(forms.ModelForm):
+    class Meta:
+        model = User
+        fields = ()
+        widget = {
+            'password': forms.PasswordInput(),
+        }
+
