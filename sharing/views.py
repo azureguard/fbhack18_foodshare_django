@@ -8,10 +8,11 @@ from .models import User, Profile
 
 # Create your views here.
 
-def user_details(request):
-    user = get_object_or_404(User, pk=id)
-    profile = Profile.objects.get()
-    return render(request, 'sharing/details.html', {'user': user})
+def user_details(request, user_id):
+    user = get_object_or_404(User, pk=user_id)
+    profile = get_object_or_404(Profile, pk=user_id)
+    return render(request, 'sharing/details.html',
+                  {'user': user, "profile": profile})
 
 
 @login_required
