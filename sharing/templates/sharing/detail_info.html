@@ -3,7 +3,7 @@
 <!DOCTYPE html>
 <html>
   <head>
-    <title>detail info</title>
+    <title>Organic Tomatoes</title>
     <meta http-equiv="X-UA-Compatible" content="IE=edge"/>
     <meta http-equiv="content-type" content="text/html; charset=utf-8"/>
     <meta name="apple-mobile-web-app-capable" content="yes"/>
@@ -20,6 +20,9 @@ font-weight: normal;
 font-style: normal;
 }
     </style>
+    <script type="text/javascript">
+      var user_id = "../{{user.id}}";
+    </script>
     <script src="{% static 'resources/scripts/jquery-1.7.1.min.js' %}"></script>
     <script src="{% static 'resources/scripts/jquery-ui-1.8.10.custom.min.js' %}"></script>
     <script src="{% static 'resources/scripts/prototypePre.js' %}"></script>
@@ -75,7 +78,7 @@ font-style: normal;
 
       <!-- Unnamed (Image) -->
       <div id="u46" class="ax_default image">
-        <img id="u46_img" class="img " src="{% static 'images/sharing/u13.jpeg' %}/>
+        <img id="u46_img" class="img " src="{% static 'images/sharing/u13.jpeg' %}"/>
       </div>
 
       <!-- Unnamed (Rectangle) -->
@@ -156,7 +159,7 @@ font-style: normal;
       <div id="u56" class="ax_default box_1">
         <img id="u56_img" class="img " src="{% static 'images/sharing/u36.png' %}"/>
         <div id="u56_text" class="text ">
-          <p><span>Cathy</span></p>
+          <p><span>{{ user.first_name }}</span></p>
         </div>
       </div>
 
