@@ -25,6 +25,13 @@
             font-style: normal;
         }
     </style>
+    <script type="text/javascript">
+    {% if user.id %}
+      var state = "../logout";
+    {% else %}
+      var state = "../login"
+    {% endif %}
+    </script>
     <script src="{% static 'resources/scripts/jquery-1.7.1.min.js' %}"></script>
     <script src="{% static 'resources/scripts/jquery-ui-1.8.10.custom.min.js' %}"></script>
     <script src="{% static 'resources/scripts/prototypePre.js' %}"></script>
@@ -52,12 +59,14 @@
     </div>
 
     <!-- Unnamed (Rectangle) -->
+<a href="group_buy">
     <div id="u1" class="ax_default button">
         <div id="u1_div" class=""></div>
         <div id="u1_text" class="text ">
             <p><span>Group Buy</span></p>
         </div>
     </div>
+</a>
 
     <!-- Unnamed (Rectangle) -->
     <div id="u2" class="ax_default button">
@@ -75,7 +84,7 @@
         <img id="u3_img" class="img " src="{% static 'images/home/u3.png' %}"/>
         <div id="u3_text" class="text ">
             <p><span>{% if user.id %}
-              {{ user.first_name }}
+              Logout
               {% else %}
                 Login
             {% endif %}</span></p>
@@ -87,7 +96,7 @@
 
     <!-- Unnamed (Image) -->
     <div id="u4" class="ax_default image">
-        <img id="u4_img" class="img " src="{% static 'images/home/u4.png' %}"/>
+        <a href="group_buy"></a>
     </div>
 
     <!-- Unnamed (Rectangle) -->

@@ -118,3 +118,4 @@ STATICFILES_DIRS = [
 ]
 
 LOGIN_REDIRECT_URL = '/sharing'
+LOGOUT_REDIRECT_URL = '/sharing'

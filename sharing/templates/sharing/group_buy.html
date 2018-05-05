@@ -20,6 +20,9 @@ font-weight: normal;
 font-style: normal;
 }
     </style>
+    <script type="text/javascript">
+      var user_id = "../{{user.id}}";
+    </script>
     <script src="{% static 'resources/scripts/jquery-1.7.1.min.js' %}"></script>
     <script src="{% static 'resources/scripts/jquery-ui-1.8.10.custom.min.js' %}"></script>
     <script src="{% static 'resources/scripts/prototypePre.js' %}"></script>
@@ -167,7 +170,7 @@ font-style: normal;
 
       <!-- Unnamed (Rectangle) -->
       <div id="u102" class="ax_default button">
-        <img id="u102_img" class="img " src="{% static 'images/sharing/u27.png' %}"/>
+{#        <img id="u102_img" class="img " src="{% static 'images/sharing/u27.png' %}"/>#}
         <div id="u102_text" class="text ">
           <p><span>White Toast from Coles</span></p>
         </div>
@@ -175,7 +178,7 @@ font-style: normal;
 
       <!-- Unnamed (Rectangle) -->
       <div id="u103" class="ax_default button">
-        <img id="u103_img" class="img " src="{% static 'images/sharing/u27.png' %}"/>
+{#        <img id="u103_img" class="img " src="{% static 'images/sharing/u27.png' %}"/>#}
         <div id="u103_text" class="text ">
           <p><span>Crackers from Coles</span></p>
         </div>
@@ -199,7 +202,7 @@ font-style: normal;
 
       <!-- Unnamed (Rectangle) -->
       <div id="u106" class="ax_default button">
-        <img id="u106_img" class="img " src="{% static 'images/sharing/u27.png' %}"/>
+{#        <img id="u106_img" class="img " src="{% static 'images/sharing/u27.png' %}"/>#}
         <div id="u106_text" class="text ">
           <p><span>Chicken Breast from Woolworths</span></p>
         </div>
@@ -207,7 +210,7 @@ font-style: normal;
 
       <!-- Unnamed (Rectangle) -->
       <div id="u107" class="ax_default button">
-        <img id="u107_img" class="img " src="{% static 'images/sharing/u27.png' %}"/>
+{#        <img id="u107_img" class="img " src="{% static 'images/sharing/u27.png' %}"/>#}
         <div id="u107_text" class="text ">
           <p><span>Chicken Drumsticks from Aldi</span></p>
         </div>
@@ -241,7 +244,7 @@ font-style: normal;
       <div id="u111" class="ax_default box_1">
         <img id="u111_img" class="img " src="{% static 'images/sharing/u36.png' %}"/>
         <div id="u111_text" class="text ">
-          <p><span>Cathy</span></p>
+          <p><span>{{ user.first_name }}</span></p>
         </div>
       </div>
 
@@ -255,7 +258,7 @@ font-style: normal;
 
       <!-- Unnamed (Rectangle) -->
       <div id="u113" class="ax_default button">
-        <img id="u113_img" class="img " src="images/sharing/u27.png"/>
+{#        <img id="u113_img" class="img " src="images/sharing/u27.png"/>#}
         <div id="u113_text" class="text ">
           <p><span>Tomato from Woolworths</span></p>
         </div>
@@ -263,7 +266,7 @@ font-style: normal;
 
       <!-- Unnamed (Rectangle) -->
       <div id="u114" class="ax_default button">
-        <img id="u114_img" class="img " src="images/sharing/u39.png"/>
+{#        <img id="u114_img" class="img " src="images/sharing/u39.png"/>#}
         <div id="u114_text" class="text ">
           <p><span>Angus Beef from Coles</span></p>
         </div>
