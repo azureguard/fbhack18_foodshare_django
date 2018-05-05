@@ -1,15 +1,17 @@
-﻿<!DOCTYPE html>
+﻿{% load static %}
+
+<!DOCTYPE html>
 <html>
   <head>
     <title>Group Buy</title>
     <meta http-equiv="X-UA-Compatible" content="IE=edge"/>
     <meta http-equiv="content-type" content="text/html; charset=utf-8"/>
     <meta name="apple-mobile-web-app-capable" content="yes"/>
-    <link href="resources/css/jquery-ui-themes.css" type="text/css" rel="stylesheet"/>
-    <link href="resources/css/axure_rp_page.css" type="text/css" rel="stylesheet"/>
-    <link href="data/styles.css" type="text/css" rel="stylesheet"/>
-    <link href="files/group_buy/styles.css" type="text/css" rel="stylesheet"/>
-    <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" type="text/css" rel="stylesheet"/>
+    <link href="{% static 'resources/css/jquery-ui-themes.css' %}" type="text/css" rel="stylesheet"/>
+    <link href="{% static 'resources/css/axure_rp_page.css' %}" type="text/css" rel="stylesheet"/>
+    <link href="{% static 'data/styles.css' %}" type="text/css" rel="stylesheet"/>
+    <link href="{% static 'files/group_buy/styles.css' %}" type="text/css" rel="stylesheet"/>
+    <link href="{% static 'https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css' %}" type="text/css" rel="stylesheet"/>
     <style type="text/css">
 @font-face {
 font-family: 'IcoMoon-Free';
@@ -18,12 +20,12 @@ font-weight: normal;
 font-style: normal;
 }
     </style>
-    <script src="resources/scripts/jquery-1.7.1.min.js"></script>
-    <script src="resources/scripts/jquery-ui-1.8.10.custom.min.js"></script>
-    <script src="resources/scripts/prototypePre.js"></script>
-    <script src="data/document.js"></script>
-    <script src="resources/scripts/prototypePost.js"></script>
-    <script src="files/group_buy/data.js"></script>
+    <script src="{% static 'resources/scripts/jquery-1.7.1.min.js' %}"></script>
+    <script src="{% static 'resources/scripts/jquery-ui-1.8.10.custom.min.js' %}"></script>
+    <script src="{% static 'resources/scripts/prototypePre.js' %}"></script>
+    <script src="{% static 'data/document.js' %}"></script>
+    <script src="{% static 'resources/scripts/prototypePost.js' %}"></script>
+    <script src="{% static 'files/group_buy/data.js' %}"></script>
     <script type="text/javascript">
       $axure.utils.getTransparentGifPath = function() { return 'resources/images/transparent.gif'; };
       $axure.utils.getOtherPath = function() { return 'resources/Other.html'; };
@@ -57,43 +59,43 @@ font-style: normal;
 
         <!-- Unnamed (Image) -->
         <div id="u86" class="ax_default image1">
-          <img id="u86_img" class="img " src="images/sharing/u11.png"/>
+          <img id="u86_img" class="img " src="{% static 'images/sharing/u11.png' %}"/>
         </div>
       </div>
 
       <!-- Image (Image) -->
       <div id="u87" class="ax_default image1" data-label="Image">
-        <img id="u87_img" class="img " src="images/sharing/image_u12.png"/>
+        <img id="u87_img" class="img " src="{% static 'images/sharing/image_u12.png' %}"/>
       </div>
 
       <!-- Unnamed (Image) -->
       <div id="u88" class="ax_default image">
-        <img id="u88_img" class="img " src="images/sharing/u13.jpeg"/>
+        <img id="u88_img" class="img " src="{% static 'images/sharing/u13.jpeg' %}"/>
       </div>
 
       <!-- Unnamed (Image) -->
       <div id="u89" class="ax_default image">
-        <img id="u89_img" class="img " src="images/sharing/u14.jpeg"/>
+        <img id="u89_img" class="img " src="{% static 'images/sharing/u14.jpeg' %}"/>
       </div>
 
       <!-- Unnamed (Image) -->
       <div id="u90" class="ax_default image">
-        <img id="u90_img" class="img " src="images/sharing/u15.jpeg"/>
+        <img id="u90_img" class="img " src="{% static 'images/sharing/u15.jpeg' %}"/>
       </div>
 
       <!-- Unnamed (Image) -->
       <div id="u91" class="ax_default image">
-        <img id="u91_img" class="img " src="images/sharing/u16.jpeg"/>
+        <img id="u91_img" class="img " src="{% static 'images/sharing/u16.jpeg' %}"/>
       </div>
 
       <!-- Unnamed (Image) -->
       <div id="u92" class="ax_default image">
-        <img id="u92_img" class="img " src="images/sharing/u17.jpeg"/>
+        <img id="u92_img" class="img " src="{% static 'images/sharing/u17.jpeg' %}"/>
       </div>
 
       <!-- Unnamed (Image) -->
       <div id="u93" class="ax_default image">
-        <img id="u93_img" class="img " src="images/sharing/u18.jpeg"/>
+        <img id="u93_img" class="img " src="{% static 'images/sharing/u18.jpeg' %}"/>
       </div>
 
       <!-- Unnamed (Rectangle) -->
@@ -146,7 +148,7 @@ font-style: normal;
 
       <!-- Unnamed (Rectangle) -->
       <div id="u100" class="ax_default box_1">
-        <img id="u100_img" class="img " src="images/group_buy/u100.png"/>
+        <img id="u100_img" class="img " src="{% static 'images/group_buy/u100.png' %}"/>
         <div id="u100_text" class="text ">
           <p><span>Initiate Group Buy</span></p>
         </div>
@@ -165,7 +167,7 @@ font-style: normal;
 
       <!-- Unnamed (Rectangle) -->
       <div id="u102" class="ax_default button">
-        <img id="u102_img" class="img " src="images/sharing/u27.png"/>
+        <img id="u102_img" class="img " src="{% static 'images/sharing/u27.png' %}"/>
         <div id="u102_text" class="text ">
           <p><span>White Toast from Coles</span></p>
         </div>
@@ -173,7 +175,7 @@ font-style: normal;
 
       <!-- Unnamed (Rectangle) -->
       <div id="u103" class="ax_default button">
-        <img id="u103_img" class="img " src="images/sharing/u27.png"/>
+        <img id="u103_img" class="img " src="{% static 'images/sharing/u27.png' %}"/>
         <div id="u103_text" class="text ">
           <p><span>Crackers from Coles</span></p>
         </div>
@@ -197,7 +199,7 @@ font-style: normal;
 
       <!-- Unnamed (Rectangle) -->
       <div id="u106" class="ax_default button">
-        <img id="u106_img" class="img " src="images/sharing/u27.png"/>
+        <img id="u106_img" class="img " src="{% static 'images/sharing/u27.png' %}"/>
         <div id="u106_text" class="text ">
           <p><span>Chicken Breast from Woolworths</span></p>
         </div>
@@ -205,7 +207,7 @@ font-style: normal;
 
       <!-- Unnamed (Rectangle) -->
       <div id="u107" class="ax_default button">
-        <img id="u107_img" class="img " src="images/sharing/u27.png"/>
+        <img id="u107_img" class="img " src="{% static 'images/sharing/u27.png' %}"/>
         <div id="u107_text" class="text ">
           <p><span>Chicken Drumsticks from Aldi</span></p>
         </div>
@@ -237,7 +239,7 @@ font-style: normal;
 
       <!-- Unnamed (Rectangle) -->
       <div id="u111" class="ax_default box_1">
-        <img id="u111_img" class="img " src="images/sharing/u36.png"/>
+        <img id="u111_img" class="img " src="{% static 'images/sharing/u36.png' %}"/>
         <div id="u111_text" class="text ">
           <p><span>Cathy</span></p>
         </div>
