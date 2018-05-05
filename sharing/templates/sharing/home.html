@@ -2,23 +2,28 @@
 
 <!DOCTYPE html>
 <html>
-  <head>
+<head>
     <title>Home</title>
     <meta http-equiv="X-UA-Compatible" content="IE=edge"/>
     <meta http-equiv="content-type" content="text/html; charset=utf-8"/>
     <meta name="apple-mobile-web-app-capable" content="yes"/>
-    <link href="{% static 'resources/css/jquery-ui-themes.css' %}" type="text/css" rel="stylesheet"/>
-    <link href="{% static 'resources/css/axure_rp_page.css' %}" type="text/css" rel="stylesheet"/>
-    <link href="{% static 'data/styles.css' %}" type="text/css" rel="stylesheet"/>
-    <link href="{% static 'files/home/styles.css' %}" type="text/css" rel="stylesheet"/>
-    <link href="{% static 'https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css' %}" type="text/css" rel="stylesheet"/>
+    <link href="{% static 'resources/css/jquery-ui-themes.css' %}"
+          type="text/css" rel="stylesheet"/>
+    <link href="{% static 'resources/css/axure_rp_page.css' %}" type="text/css"
+          rel="stylesheet"/>
+    <link href="{% static 'data/styles.css' %}" type="text/css"
+          rel="stylesheet"/>
+    <link href="{% static 'files/home/styles.css' %}" type="text/css"
+          rel="stylesheet"/>
+    <link href="{% static 'https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css' %}"
+          type="text/css" rel="stylesheet"/>
     <style type="text/css">
-@font-face {
-font-family: 'IcoMoon-Free';
-src: url('https://raw.githubusercontent.com/Keyamoon/IcoMoon-Free/master/Font/IcoMoon-Free.ttf') format('truetype');
-font-weight: normal;
-font-style: normal;
-}
+        @font-face {
+            font-family: 'IcoMoon-Free';
+            src: url('https://raw.githubusercontent.com/Keyamoon/IcoMoon-Free/master/Font/IcoMoon-Free.ttf') format('truetype');
+            font-weight: normal;
+            font-style: normal;
+        }
     </style>
     <script src="{% static 'resources/scripts/jquery-1.7.1.min.js' %}"></script>
     <script src="{% static 'resources/scripts/jquery-ui-1.8.10.custom.min.js' %}"></script>
@@ -27,61 +32,71 @@ font-style: normal;
     <script src="{% static 'resources/scripts/prototypePost.js' %}"></script>
     <script src="{% static 'files/home/data.js' %}"></script>
     <script type="text/javascript">
-      $axure.utils.getTransparentGifPath = function() { return 'resources/images/transparent.gif'; };
-      $axure.utils.getOtherPath = function() { return 'resources/Other.html'; };
-      $axure.utils.getReloadPath = function() { return 'resources/reload.html'; };
+        $axure.utils.getTransparentGifPath = function () {
+            return 'resources/images/transparent.gif';
+        };
+        $axure.utils.getOtherPath = function () {
+            return 'resources/Other.html';
+        };
+        $axure.utils.getReloadPath = function () {
+            return 'resources/reload.html';
+        };
     </script>
-  </head>
-  <body>
-    <div id="base" class="">
+</head>
+<body>
+<div id="base" class="">
 
-      <!-- Unnamed (Image) -->
-      <div id="u0" class="ax_default image">
+    <!-- Unnamed (Image) -->
+    <div id="u0" class="ax_default image">
         <img id="u0_img" class="img " src="{% static 'images/home/u0.jpeg' %}"/>
-      </div>
+    </div>
 
-      <!-- Unnamed (Rectangle) -->
-      <div id="u1" class="ax_default button">
+    <!-- Unnamed (Rectangle) -->
+    <div id="u1" class="ax_default button">
         <div id="u1_div" class=""></div>
         <div id="u1_text" class="text ">
-          <p><span>Group Buy</span></p>
+            <p><span>Group Buy</span></p>
         </div>
-      </div>
+    </div>
 
-      <!-- Unnamed (Rectangle) -->
-      <div id="u2" class="ax_default button">
+    <!-- Unnamed (Rectangle) -->
+    <div id="u2" class="ax_default button">
         <img id="u2_img" class="img " src="{% static 'images/home/u2.png' %}"/>
         <div id="u2_text" class="text ">
-          <p><span>Sharing</span></p>
+            <p><span>Sharing</span></p>
         </div>
-      </div>
+    </div>
 
-      <!-- Unnamed (Rectangle) [reference page] -->
-      <div id="u2_ref" class="reference_page"></div>
+    <!-- Unnamed (Rectangle) [reference page] -->
+    <div id="u2_ref" class="reference_page"></div>
 
-      <!-- Unnamed (Rectangle) -->
-      <div id="u3" class="ax_default button">
+    <!-- Unnamed (Rectangle) -->
+    <div id="u3" class="ax_default button">
         <img id="u3_img" class="img " src="{% static 'images/home/u3.png' %}"/>
         <div id="u3_text" class="text ">
-          <p><span>Login</span></p>
+            <p><span>{% if user.id %}
+              {{ user.first_name }}
+              {% else %}
+                Login
+            {% endif %}</span></p>
         </div>
-      </div>
+    </div>
 
-      <!-- Unnamed (Rectangle) [reference page] -->
-      <div id="u3_ref" class="reference_page"></div>
+    <!-- Unnamed (Rectangle) [reference page] -->
+    <div id="u3_ref" class="reference_page"></div>
 
-      <!-- Unnamed (Image) -->
-      <div id="u4" class="ax_default image">
+    <!-- Unnamed (Image) -->
+    <div id="u4" class="ax_default image">
         <img id="u4_img" class="img " src="{% static 'images/home/u4.png' %}"/>
-      </div>
+    </div>
 
-      <!-- Unnamed (Rectangle) -->
-      <div id="u5" class="ax_default heading_1">
+    <!-- Unnamed (Rectangle) -->
+    <div id="u5" class="ax_default heading_1">
         <div id="u5_div" class=""></div>
         <div id="u5_text" class="text ">
-          <p><span>ComFood</span></p>
+            <p><span>ComFood</span></p>
         </div>
-      </div>
     </div>
-  </body>
+</div>
+</body>
 </html>

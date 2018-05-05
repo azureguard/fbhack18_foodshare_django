@@ -39,4 +39,10 @@ def update_profile(request):
 
 
 def index(request):
+    return render(request, 'sharing/home.html')
+
+def group_buy(request):
+    return render(request, 'sharing/group_buy.html')
+
+def sharing(request):
     return render(request, 'sharing/index.html')
