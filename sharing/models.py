@@ -1,18 +1,20 @@
 from django.db import models
-from .models import users
+from ..users.models import User
 
 
 class ItemManager(models.Manager):
     def create_item(self, name, type, amount, unit):
-        item = self.create(name = name, type = type, amount = amount, unit = unit)
+        item = self.create(name=name, type=type, amount=amount, unit=unit)
         return item
+
 
 class RecipeManager(models.Manager):
     def create_recipe(self, name):
-        recipe = self.create(user = users.User.name, name = name, items = Item.name)
+        recipe = self.create(user=User.name, name=name, items=Item.name)
         return recipe
 
-class AvailableItem
+
+class AvailableItem(models.Manager):
     def create_availableitem(self):
         availableitem = self.create()
         return availableitem
